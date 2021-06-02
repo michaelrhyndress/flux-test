@@ -4,14 +4,14 @@ metadata:
   labels:
     toolkit.fluxcd.io/tenant: bu-team
   name: gotk-reconciler
-  namespace: apps
+  namespace: bu-namespace
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: cluster-admin
 subjects:
 - kind: User
-  name: gotk:apps:reconciler
+  name: gotk:bu-namespace:reconciler
 - kind: ServiceAccount
   name: bu-team
   namespace: bu-namespace
