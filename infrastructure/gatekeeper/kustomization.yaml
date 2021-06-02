@@ -3,11 +3,6 @@ kind: Kustomization
 metadata:
   name: gatekeeper
   namespace: gatekeeper-system
-namespace: gatekeeper-system
-commonLabels:
-  tier: system
-commonAnnotations:
-  support.team: 'EKSF'
 resources:
   - deployment.yaml
 ---
