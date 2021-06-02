@@ -1,0 +1,14 @@
+flux create source github \
+    --context=arn:aws:eks:us-east-1:992452229109:cluster/manual-eks \
+    --owner=${GITHUB_USER} \
+    --repository=${GITHUB_REPO} \
+    --branch=main \
+    --personal \
+    --path=clusters/dev
+
+
+
+flux create source git bu-repo \
+    --namespace=flux-system \
+    --url=https://github.com/michaelrhyndress/flux-bu \
+    --branch=main
