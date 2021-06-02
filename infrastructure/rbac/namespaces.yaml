@@ -4,11 +4,3 @@ metadata:
   labels:
     toolkit.fluxcd.io/tenant: bu-team
   name: bu-namespace
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  labels:
-    toolkit.fluxcd.io/tenant: bu-team
-  name: bu-team
-  namespace: bu-namespace
