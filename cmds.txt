@@ -7,8 +7,13 @@ flux create source github \
     --path=clusters/dev
 
 
-
 flux create source git bu-repo \
-    --namespace=flux-system \
+    --namespace=bu-namespace \
     --url=https://github.com/michaelrhyndress/flux-bu \
     --branch=main
+
+flux create kustomization bu-repo \
+    --namespace=bu-namespace \
+    --service-account=bu-team \
+    --source=GitRepository/bu-repo \
+    --path="./"
